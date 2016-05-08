@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<style>
+		html, body {
+			padding: 0;
+			margin: 15px;
+			font-family: sans-serif;
+		}
+		.terms {
+			float: left;
+		}
+		.terms > * {
+			display: block;
+			margin-bottom: 6px;
+			text-decoration: none;
+		}
+		.video {
+			float: left;
+			margin-left: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="terms"  data-terms></div>
+	<video class="video" width="640" height="360" autoplay loop>
+		<source data-video-type="mp4" src="clips/app.mp4" type="video/mp4">
+		<source data-video-type="webm" src="clips/app.webm" type="video/webm">
+		Your browser doesn't support HTML5 video tag.
+	</video>
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script>
+
+		function buildList () {	
+			var container = document.querySelector('[data-terms]');
+			['app', 'design', 'GitHub', 'Internet', 'issue', 'mobile app', 'paywall', 'PR', 'web', 'webpage', 'website'].forEach(function (sign) {
+				var a = document.createElement('a');
+				a.setAttribute('href', '#' + sign);
+				a.innerText = sign;
+				container.appendChild(a);
+			});
+		}
+
+		buildList();
+
+		window.onhashchange = function () {
+			var base = 'clips/' + window.location.hash.replace(/#/, '');
+			['mp4', 'webm'].forEach(function (type) {
+				var tag = document.querySelector('[data-video-type="' + type + '"]');
+				tag.setAttribute('src', base + '.' + type);
+			});
+			document.querySelector('video').load();
+		};
+
+	</script>
+</body>
+</html>
