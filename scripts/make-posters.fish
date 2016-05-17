@@ -1,0 +1,3 @@
+for i in BA CSS Chrome DevTools Firefox GitHub HTML IE Internet Java JavaScript Linux Mac Next Opera Origami PHP PM Python Ruby Safari Sass UX Windows agile app browser bug code-review code communications debug demo deploy design designer develop developer devops engineer hardware issue labs launch lawyer legal membership mobile-app old paywall platform prototype pull-request release software stream technology tester web-app web webpage website
+	ffmpeg -y  -i ../clips/$i.mp4 -f mjpeg -vframes 1 -ss 1 $i.jpg
+end

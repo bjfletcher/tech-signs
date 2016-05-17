@@ -5,55 +5,60 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		html, body {
+			margin: 0;
 			padding: 0;
-			margin: 15px;
 			font-family: sans-serif;
+			background-color: #000;
 		}
-		.terms {
+		.sign-list,
+		.tag-list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		.sign-list__sign,
+		.tag-list__tag {
 			float: left;
 		}
-		.terms > * {
-			display: block;
-			margin-bottom: 6px;
-			text-decoration: none;
+		.sign-list__sign {
+			box-sizing: border-box;
+			padding: 5px;
+			width: 100%;
 		}
+
+		@media (min-width:500px) {
+			.sign-list__sign {
+				width: 50%;
+			}
+		}
+		@media (min-width:800px) {
+			.sign-list__sign {
+				width: 33%;
+			}
+		}
+
+		@media (min-width:1100px) {
+			.sign-list__sign {
+				width: 25%;
+			}
+		}
+
 		.video {
-			float: left;
-			margin-left: 15px;
+			width: 100%;
+		}
+		.tag-list__tag {
+			padding: 5px 10px;
+			margin-right: 5px;
+			border-radius: 5px;
+			background-color: #ea148c;
+			color: #fff;
+			font-size: 18px;
 		}
 	</style>
 </head>
 <body>
-	<div class="terms"  data-terms></div>
-	<video class="video" width="640" height="360" autoplay loop>
-		<source data-video-type="mp4" src="clips/app.mp4" type="video/mp4">
-		<source data-video-type="webm" src="clips/app.webm" type="video/webm">
-		Your browser doesn't support HTML5 video tag.
-	</video>
-	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-	<script>
 
-		function buildList () {	
-			var container = document.querySelector('[data-terms]');
-			['app', 'design', 'GitHub', 'Internet', 'issue', 'mobile app', 'paywall', 'PR', 'web', 'webpage', 'website'].forEach(function (sign) {
-				var a = document.createElement('a');
-				a.setAttribute('href', '#' + sign);
-				a.textContent = sign;
-				container.appendChild(a);
-			});
-		}
+<ol class="sign-list"><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/BA.jpg" src="clips/BA.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Business Analyst</li><li class="tag-list__tag">BA</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/CSS.jpg" src="clips/CSS.mp4"></video><ol class="tag-list"><li class="tag-list__tag">CSS</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Chrome.jpg" src="clips/Chrome.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Google Chrome</li><li class="tag-list__tag">Chrome</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/DevTools.jpg" src="clips/DevTools.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Chrome DevTools</li><li class="tag-list__tag">DevTools</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Firefox.jpg" src="clips/Firefox.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Firefox</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/GitHub.jpg" src="clips/GitHub.mp4"></video><ol class="tag-list"><li class="tag-list__tag">GitHub</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/HTML.jpg" src="clips/HTML.mp4"></video><ol class="tag-list"><li class="tag-list__tag">HTML</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/IE.jpg" src="clips/IE.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Internet Explorer</li><li class="tag-list__tag">IE</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Internet.jpg" src="clips/Internet.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Internet</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Java.jpg" src="clips/Java.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Java</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/JavaScript.jpg" src="clips/JavaScript.mp4"></video><ol class="tag-list"><li class="tag-list__tag">JavaScript</li><li class="tag-list__tag">JS</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Linux.jpg" src="clips/Linux.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Linux</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Mac.jpg" src="clips/Mac.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Mac</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Next.jpg" src="clips/Next.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Next</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Opera.jpg" src="clips/Opera.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Opera</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Origami.jpg" src="clips/Origami.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Origami</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/PHP.jpg" src="clips/PHP.mp4"></video><ol class="tag-list"><li class="tag-list__tag">PHP</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/PM.jpg" src="clips/PM.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Project Manager</li><li class="tag-list__tag">PM</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Python.jpg" src="clips/Python.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Python</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Ruby.jpg" src="clips/Ruby.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Ruby</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Safari.jpg" src="clips/Safari.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Safari</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Sass.jpg" src="clips/Sass.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Sass</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/UX.jpg" src="clips/UX.mp4"></video><ol class="tag-list"><li class="tag-list__tag">User Experience</li><li class="tag-list__tag">UX</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/Windows.jpg" src="clips/Windows.mp4"></video><ol class="tag-list"><li class="tag-list__tag">Windows</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/agile.jpg" src="clips/agile.mp4"></video><ol class="tag-list"><li class="tag-list__tag">agile</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/app.jpg" src="clips/app.mp4"></video><ol class="tag-list"><li class="tag-list__tag">app</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/browser.jpg" src="clips/browser.mp4"></video><ol class="tag-list"><li class="tag-list__tag">browser</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/bug.jpg" src="clips/bug.mp4"></video><ol class="tag-list"><li class="tag-list__tag">bug</li><li class="tag-list__tag">defect</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/code-review.jpg" src="clips/code-review.mp4"></video><ol class="tag-list"><li class="tag-list__tag">code review</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/code.jpg" src="clips/code.mp4"></video><ol class="tag-list"><li class="tag-list__tag">code</li><li class="tag-list__tag">program</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/communications.jpg" src="clips/communications.mp4"></video><ol class="tag-list"><li class="tag-list__tag">communications</li><li class="tag-list__tag">comms</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/debug.jpg" src="clips/debug.mp4"></video><ol class="tag-list"><li class="tag-list__tag">debug</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/demo.jpg" src="clips/demo.mp4"></video><ol class="tag-list"><li class="tag-list__tag">demonstration</li><li class="tag-list__tag">demo</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/deploy.jpg" src="clips/deploy.mp4"></video><ol class="tag-list"><li class="tag-list__tag">deploy</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/design.jpg" src="clips/design.mp4"></video><ol class="tag-list"><li class="tag-list__tag">design</li><li class="tag-list__tag">designer</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/develop.jpg" src="clips/develop.mp4"></video><ol class="tag-list"><li class="tag-list__tag">develop</li><li class="tag-list__tag">developer</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/devops.jpg" src="clips/devops.mp4"></video><ol class="tag-list"><li class="tag-list__tag">devops</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/engineer.jpg" src="clips/engineer.mp4"></video><ol class="tag-list"><li class="tag-list__tag">engineer</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/hardware.jpg" src="clips/hardware.mp4"></video><ol class="tag-list"><li class="tag-list__tag">hardware</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/issue.jpg" src="clips/issue.mp4"></video><ol class="tag-list"><li class="tag-list__tag">issue</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/labs.jpg" src="clips/labs.mp4"></video><ol class="tag-list"><li class="tag-list__tag">labs</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/launch.jpg" src="clips/launch.mp4"></video><ol class="tag-list"><li class="tag-list__tag">launch</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/lawyer.jpg" src="clips/lawyer.mp4"></video><ol class="tag-list"><li class="tag-list__tag">lawyer</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/legal.jpg" src="clips/legal.mp4"></video><ol class="tag-list"><li class="tag-list__tag">legal</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/membership.jpg" src="clips/membership.mp4"></video><ol class="tag-list"><li class="tag-list__tag">membership</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/mobile-app.jpg" src="clips/mobile-app.mp4"></video><ol class="tag-list"><li class="tag-list__tag">mobile app</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/paywall.jpg" src="clips/paywall.mp4"></video><ol class="tag-list"><li class="tag-list__tag">paywall</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/platform.jpg" src="clips/platform.mp4"></video><ol class="tag-list"><li class="tag-list__tag">platform</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/prototype.jpg" src="clips/prototype.mp4"></video><ol class="tag-list"><li class="tag-list__tag">prototype</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/pull-request.jpg" src="clips/pull-request.mp4"></video><ol class="tag-list"><li class="tag-list__tag">pull request</li><li class="tag-list__tag">PR</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/release.jpg" src="clips/release.mp4"></video><ol class="tag-list"><li class="tag-list__tag">release</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/software.jpg" src="clips/software.mp4"></video><ol class="tag-list"><li class="tag-list__tag">software</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/stream.jpg" src="clips/stream.mp4"></video><ol class="tag-list"><li class="tag-list__tag">stream</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/technology.jpg" src="clips/technology.mp4"></video><ol class="tag-list"><li class="tag-list__tag">technology</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/tester.jpg" src="clips/tester.mp4"></video><ol class="tag-list"><li class="tag-list__tag">test</li><li class="tag-list__tag">tester</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/web-app.jpg" src="clips/web-app.mp4"></video><ol class="tag-list"><li class="tag-list__tag">web app</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/web.jpg" src="clips/web.mp4"></video><ol class="tag-list"><li class="tag-list__tag">web</li></ol></li><li class="sign-list__sign"><video class="video" controls="" loop="" preload="metadata" poster="posters/webpage.jpg" src="clips/webpage.mp4"></video><ol class="tag-list"><li class="tag-list__tag">webpage</li></ol></li></ol>
 
-		buildList();
-
-		window.onhashchange = function () {
-			var base = 'clips/' + window.location.hash.replace(/#/, '');
-			['mp4', 'webm'].forEach(function (type) {
-				var tag = document.querySelector('[data-video-type="' + type + '"]');
-				tag.setAttribute('src', base + '.' + type);
-			});
-			document.querySelector('video').load();
-		};
-
-	</script>
 </body>
 </html>
