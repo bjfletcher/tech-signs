@@ -3,6 +3,12 @@ import ReactDOMServer from 'react-dom/server'
 
 import data from './data'
 
+const sortedData = data.sort((a, b) => {
+	const la = a.tags[0].toLowerCase()
+	const lb = b.tags[0].toLowerCase()
+	return la < lb ? -1 : la > lb ? 1 : 0
+})
+
 const Video = ({ id }) => (
 	<video className="video" controls loop preload="metadata" poster={`posters/${id}.jpg`} src={`clips/${id}.mp4`}></video>
 )
@@ -34,4 +40,4 @@ const SignList = ({ signs }) => {
 	)
 }
 
-console.log(ReactDOMServer.renderToStaticMarkup(<SignList signs={data}/>))
+console.log(ReactDOMServer.renderToStaticMarkup(<SignList signs={sortedData}/>))
