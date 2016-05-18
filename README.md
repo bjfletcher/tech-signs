@@ -8,3 +8,4 @@
 - use video js for a nice play icon in the middle?
 - ffmpeg webm versions for non-H264 browsers?
 - a little note at the top as introduction and probably useful for SEO
+- play video when hoovering, rather than having to click
